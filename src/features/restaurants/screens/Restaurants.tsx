@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { SafeAreaView, StatusBar, StyleSheet, View } from 'react-native';
 import { Searchbar } from 'react-native-paper';
 import { RestaurantInfoCard } from '../components/RestaurantInfoCard';
-import { theme } from 'src/assets/theme';
+import { theme } from '../../../assets/theme';
 
 const SafeArea = styled(SafeAreaView)`
   flex: 1;
@@ -11,12 +11,12 @@ const SafeArea = styled(SafeAreaView)`
 `;
 
 const SearchView = styled(View)`
-  padding: 8px;
+  padding: ${theme.space[2]};
 `;
 
 const ListView = styled(View)`
   flex: 1;
-  padding: ${theme.space[16]};
+  padding: ${theme.space[3]};
 `;
 
 export const Restaurants = () => {
@@ -43,16 +43,3 @@ export const Restaurants = () => {
     </SafeArea>
   );
 };
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-  },
-  searchView: {
-    padding: 8,
-  },
-  listView: {
-    flex: 1,
-    padding: 16,
-  },
-});

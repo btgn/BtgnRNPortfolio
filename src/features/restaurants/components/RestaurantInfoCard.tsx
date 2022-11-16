@@ -1,12 +1,12 @@
 import React, { FC } from 'react';
 import { StyleSheet, Text } from 'react-native';
 import { Card } from 'react-native-paper';
-import { theme } from 'src/assets/theme';
+import { theme } from '../../../assets/theme';
 import styled from 'styled-components';
 import { RestaurantInfoCardProps } from './types';
 
 const Title = styled(Text)`
-  padding: 16px;
+  padding: ${theme.space[3]};
   color: ${theme.colors.ui.primary};
 `;
 
@@ -22,5 +22,3 @@ export const RestaurantInfoCard: FC<RestaurantInfoCardProps> = ({
     </Card>
   );
 };
-
-const styles = StyleSheet.create({});
