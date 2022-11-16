@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import { SafeAreaView, StatusBar, StyleSheet, View } from 'react-native';
 import { Searchbar } from 'react-native-paper';
 import { RestaurantInfoCard } from '../components/RestaurantInfoCard';
+import { theme } from 'src/assets/theme';
 
 const SafeArea = styled(SafeAreaView)`
   flex: 1;
@@ -15,7 +16,7 @@ const SearchView = styled(View)`
 
 const ListView = styled(View)`
   flex: 1;
-  padding: 16px;
+  padding: ${theme.space[16]};
 `;
 
 export const Restaurants = () => {
